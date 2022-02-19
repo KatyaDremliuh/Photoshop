@@ -19,16 +19,22 @@ namespace MyPhotoshop
 
         public double G
         {
-            get => g;
-            set => Check(value);
+            get { return g; }
+            set
+            {
+                g = Check(value);
+            }
         }
 
         private double b;
 
         public double B
         {
-            get => b;
-            set => Check(value);
+            get { return b; }
+            set
+            {
+                b = Check(value);
+            }
         }
 
         public double Check(double value)
@@ -41,14 +47,14 @@ namespace MyPhotoshop
             return value;
         }
 
-       public static double Trim(double value)
+        public static double Trim(double value)
         {
-            if (value<0)
+            if (value < 0)
             {
                 return 0;
             }
 
-            if (value>1)
+            if (value > 1)
             {
                 return 1;
             }
